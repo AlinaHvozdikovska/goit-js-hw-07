@@ -17,6 +17,9 @@ createBtn.addEventListener('click', () => {
     alert('Please enter a number between 1 and 100');
     return;
   }
+  /* Очистка предидущих box перед созданием новых */
+
+  destroyBoxes();
 
   /* очистка инпута */
   createBoxes(amount);
@@ -26,6 +29,7 @@ createBtn.addEventListener('click', () => {
 destroyBtn.addEventListener('click', () => {
   destroyBoxes();
 });
+
 function createBoxes(amount) {
   const boxes = [];
 
